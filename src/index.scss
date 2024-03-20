@@ -1,0 +1,22 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0 auto;
+  background: rgb(25,26,28);
+  max-width: 1180px;
+  padding: 0 40px;
+  color: white;
+    a {
+      color: white;
+      text-decoration: none;
+      }
+}
