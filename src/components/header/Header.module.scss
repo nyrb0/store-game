@@ -1,7 +1,25 @@
-.wrapper{
+.header{
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 30px;
+}
+
+.wrapper{
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+
+}
+.title{
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      align-items: center;
+}
+
+.btnWrapper{
+      justify-content: flex-end;
 }

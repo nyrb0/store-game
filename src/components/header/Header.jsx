@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import headerClass from './Header.module.scss'
+import CartBlock from './cart-block/CartBlock';
 
 
 const Header = ()=>{
@@ -9,12 +10,12 @@ const Header = ()=>{
                         <Link className={headerClass.title}>
                               Game Store
                         </Link>
-                        <div className={headerClass.BtnWrapper}>
-                              cart
+                        <div className={headerClass.btnWrapper}>
+                              <CartBlock/>
                         </div>
                   </div>
             </div>
       )
 }
-
+      
 export default Header;
