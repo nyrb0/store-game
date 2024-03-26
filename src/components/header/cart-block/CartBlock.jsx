@@ -13,7 +13,7 @@ const CartBlock = ()=>{
             <div className={cartBlockClass.block}>
                   <ItemsInCart quantity={items.length}/>
                   <IoCartOutline size={25} 
-                  calcMode={cartBlockClass.icon} 
+                  className={cartBlockClass.icon} 
                   onClick={()=>setIsCartMenuVisible(!isCartMenuVisible)}/>
                   {totalPrice !== 0 ?
                   <span className={cartBlockClass.totalPrice}>{totalPrice}сом</span>
