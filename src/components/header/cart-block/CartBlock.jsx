@@ -3,12 +3,20 @@ import { IoCartOutline } from "react-icons/io5";
 import { useSelector } from 'react-redux';
 import { calcTotalPrice } from '../../utils';
 import CartMenu from '../../cart-menu/CartMenu';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import ItemsInCart from '../../items-in-cart/ItemsInCart';
+import { useNavigate } from 'react-router-dom';
 const CartBlock = ()=>{
       const [isCartMenuVisible, setIsCartMenuVisible]= useState(false)
+
       const items = useSelector(state=>state.cart.itemsInCart)
       const totalPrice = calcTotalPrice(items)
+
+      const navigate = useNavigate();
+      const handleClick = useCallback(()=>{
+            setIsCartMenuVisible(false);
+            navigate('/order');
+      },[navigate])
       return(
             <div className={cartBlockClass.block}>
                   <ItemsInCart quantity={items.length}/>
@@ -19,7 +27,7 @@ const CartBlock = ()=>{
                   <span className={cartBlockClass.totalPrice}>{totalPrice}сом</span>
                   : null}
                   {isCartMenuVisible &&
-                  <CartMenu items={items} onClick={()=>null}/>}
+                  <CartMenu items={items} onClick={handleClick}/>}
             </div>
       )
 }
